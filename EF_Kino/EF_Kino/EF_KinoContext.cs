@@ -13,11 +13,6 @@ namespace EF_Kino
     public class EF_KinoContext : DbContext
     {
 
-        public DbSet<Kino> Kino { get; set; }
-     
-        public DbSet<Adres> Adres { get; set; }
-
-
         public static readonly ILoggerFactory Logger = LoggerFactory.Create(builder => {builder.AddConsole();});
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

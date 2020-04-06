@@ -12,6 +12,7 @@ namespace EF_Kino.Configurations
         public void Configure(EntityTypeBuilder<Bilet> builder)
         {
             builder.ToTable("Bilety");
+            builder.HasKey(x => x.IdBiletu);
 
         }
     }

@@ -4,14 +4,16 @@ using EF_Kino;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EF_Kino.Migrations
 {
     [DbContext(typeof(EF_KinoContext))]
-    partial class EF_KinoContextModelSnapshot : ModelSnapshot
+    [Migration("20200406090706_Depen")]
+    partial class Depen
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

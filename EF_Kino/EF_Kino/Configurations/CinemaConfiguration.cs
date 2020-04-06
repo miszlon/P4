@@ -12,8 +12,12 @@ namespace EF_Kino.Configurations
         public void Configure(EntityTypeBuilder<Kino> builder)
         {
             builder.ToTable("Kina");
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => x.IdKina);
             builder.Property(x => x.Nazwa).IsRequired();
+            builder.HasMany(x => x.Sala).WithOne(x => x.Kino);
+            builder.HasOne(x => x.AdresKina).WithOne(b => b.Kino).HasForeignKey<Adres>(b => b.IdAdresu);
+            
+            
         }
     }
 }

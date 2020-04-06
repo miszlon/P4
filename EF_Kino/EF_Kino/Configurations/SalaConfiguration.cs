@@ -12,6 +12,8 @@ namespace EF_Kino.Configurations
         public void Configure(EntityTypeBuilder<Sala> builder)
         {
             builder.ToTable("Sale");
+            builder.HasKey(x => x.IdSali);
+            builder.HasMany(x => x.Miejsce).WithOne(x => x.Sala);
         }
     }
 }

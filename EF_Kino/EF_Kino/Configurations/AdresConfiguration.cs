@@ -12,9 +12,7 @@ namespace EF_Kino.Configurations
         public void Configure(EntityTypeBuilder<Adres> builder)
         {
             builder.ToTable("Adresy");
-            builder.HasKey(x => x.Id);
-            
-
+            builder.HasKey(x => x.IdAdresu);            
         }
     }
 }

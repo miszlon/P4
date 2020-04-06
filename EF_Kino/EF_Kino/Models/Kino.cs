@@ -6,9 +6,10 @@ namespace EF_Kino.Models
 {
     public class Kino
     {
-        public int Id { get; set; }
+        public int IdKina { get; set; }
         public string Nazwa { get; set; }
-        public virtual Adres Adres { get; set; }
-
+        public ICollection<Sala> Sala { get; set; }
+        public virtual Adres AdresKina { get; set; }
+      
     }
 }
