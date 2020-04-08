@@ -104,7 +104,8 @@ namespace CentrumHandlowe
                 #endregion
 
                 #region ----Zadanie 3 ---- ZMODYFIKOWAĆ OBIEKT WPROWADZONY W MSSMS
-                //var UpdateDb = context.Obiekty.SqlQuery("UPDATE dbo.Obiekty SET Nazwa = 'CinemaCity' WHERE Nazwa = 'MultiKino'");
+                var UpdateDb = context.Obiekty.OfType<Pomieszczenie>().Where(x => x.Nazwa == "Nike").FirstOrDefault();
+                UpdateDb.Nazwa = "Reebok";
                 #endregion
 
                 #region ----ZADANIE 4---- USUWANIE_OBIEKTÓW_Z_BAZY_DODANYCH
@@ -116,8 +117,7 @@ namespace CentrumHandlowe
                 //context.Obiekty.Remove(context.Obiekty.First(x => x.IdObiektu == 27));
                 //context.Obiekty.Remove(context.Obiekty.First(x => x.IdObiektu == 28));
                 #endregion
-
-               
+          
                 context.SaveChanges();
                 Console.ReadLine();
 
