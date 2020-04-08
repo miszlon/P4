@@ -10,7 +10,7 @@
         <InheritanceConnector EntityType="CentrumHandloweModel.Poziom" />
         <EntityTypeShape EntityType="CentrumHandloweModel.Korytarz" Width="1.5" PointX="5.625" PointY="1" />
         <InheritanceConnector EntityType="CentrumHandloweModel.Korytarz" />
-        <EntityTypeShape EntityType="CentrumHandloweModel.Parking" Width="1.5" PointX="2.5" PointY="2.375" />
+        <EntityTypeShape EntityType="CentrumHandloweModel.Parking" Width="1.5" PointX="0.5" PointY="3" />
         <InheritanceConnector EntityType="CentrumHandloweModel.Parking" />
         <EntityTypeShape EntityType="CentrumHandloweModel.ObiektDoWynajecia" Width="1.5" PointX="8.5" PointY="1" />
         <InheritanceConnector EntityType="CentrumHandloweModel.ObiektDoWynajecia" />

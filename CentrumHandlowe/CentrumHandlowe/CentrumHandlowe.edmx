@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="IdObiektu" />
           </Key>
-          <Property Name="IdObiektu" Type="int" Nullable="false" />
+          <Property Name="IdObiektu" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Nazwa" Type="nvarchar" MaxLength="30" />
           <Property Name="NazwaTechniczna" Type="nvarchar" MaxLength="30" />
           <Property Name="PowCalkowita" Type="int" />
@@ -32,7 +32,7 @@
           <Key>
             <PropertyRef Name="IdObiektu" />
           </Key>
-          <Property Name="IdObiektu" Type="Int32" Nullable="false" />
+          <Property Name="IdObiektu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nazwa" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="NazwaTechniczna" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
         </EntityType>
