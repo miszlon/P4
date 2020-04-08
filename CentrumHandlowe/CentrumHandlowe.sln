@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentrumHandlowe", "CentrumHandlowe\CentrumHandlowe.csproj", "{03FF5689-0C4F-4C03-94AC-D98A7BF57FB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03FF5689-0C4F-4C03-94AC-D98A7BF57FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03FF5689-0C4F-4C03-94AC-D98A7BF57FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03FF5689-0C4F-4C03-94AC-D98A7BF57FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03FF5689-0C4F-4C03-94AC-D98A7BF57FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F55C2C12-BE84-429F-9D48-2A4EBAC95B3F}
+	EndGlobalSection
+EndGlobal

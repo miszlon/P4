@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CentrumHandloweModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Obiekty">
+          <Key>
+            <PropertyRef Name="IdObiektu" />
+          </Key>
+          <Property Name="IdObiektu" Type="int" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="30" />
+          <Property Name="NazwaTechniczna" Type="nvarchar" MaxLength="30" />
+          <Property Name="PowCalkowita" Type="int" />
+          <Property Name="TypObiektu" Type="nvarchar" MaxLength="30" />
+          <Property Name="LiczbaMiejscPark" Type="int" />
+          <Property Name="TypDzialalnosci" Type="nvarchar" MaxLength="30" />
+          <Property Name="PowWynajmu" Type="int" />
+          <Property Name="RozpWynajmu" Type="datetime" />
+          <Property Name="ZakWynajmu" Type="datetime" />
+          <Property Name="CenaWynajmu" Type="money" />
+        </EntityType>
+        <EntityContainer Name="CentrumHandloweModelStoreContainer">
+          <EntitySet Name="Obiekty" EntityType="Self.Obiekty" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CentrumHandloweModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Obiekty">
+          <Key>
+            <PropertyRef Name="IdObiektu" />
+          </Key>
+          <Property Name="IdObiektu" Type="Int32" Nullable="false" />
+          <Property Name="Nazwa" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NazwaTechniczna" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="CentrumHandloweEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Obiekty" EntityType="Self.Obiekty" />
+          </EntityContainer>
+        <EntityType Name="Poziom" BaseType="CentrumHandloweModel.Obiekty" >
+          <Property Name="PowCalkowita" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Korytarz" BaseType="CentrumHandloweModel.Poziom" />
+        <EntityType Name="Parking" BaseType="CentrumHandloweModel.Obiekty" >
+          <Property Name="LiczbaMiejscPark" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ObiektDoWynajecia" BaseType="CentrumHandloweModel.Korytarz" >
+          <Property Name="TypDzialalnosci" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CenaWynajmu" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="RozpWynajmu" Type="DateTime" Precision="3" />
+          <Property Name="ZakWynajmu" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Pomieszczenie" BaseType="CentrumHandloweModel.ObiektDoWynajecia" >
+          <Property Name="PowWynajmu" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Stand" BaseType="CentrumHandloweModel.ObiektDoWynajecia" />
+        <EntityType Name="PomieszczenieTechniczne" BaseType="CentrumHandloweModel.ObiektDoWynajecia" />
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CentrumHandloweModelStoreContainer" CdmEntityContainer="CentrumHandloweEntities">
+          <EntitySetMapping Name="Obiekty">
+            <EntityTypeMapping TypeName="IsTypeOf(CentrumHandloweModel.Obiekty)">
+              <MappingFragment StoreEntitySet="Obiekty">
+                <ScalarProperty Name="IdObiektu" ColumnName="IdObiektu" />
+                <ScalarProperty Name="NazwaTechniczna" ColumnName="NazwaTechniczna" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(CentrumHandloweModel.Parking)">
+              <MappingFragment StoreEntitySet="Obiekty">
+                <ScalarProperty Name="IdObiektu" ColumnName="IdObiektu" />
+                <ScalarProperty Name="LiczbaMiejscPark" ColumnName="LiczbaMiejscPark" />
+                <Condition ColumnName="TypObiektu" Value="Parking" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="CentrumHandloweModel.Poziom">
+              <MappingFragment StoreEntitySet="Obiekty">
+                <ScalarProperty Name="IdObiektu" ColumnName="IdObiektu" />
+                <ScalarProperty Name="PowCalkowita" ColumnName="PowCalkowita" />
+                <Condition ColumnName="TypObiektu" Value="Poziom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="CentrumHandloweModel.Korytarz">
+              <MappingFragment StoreEntitySet="Obiekty">
+                <ScalarProperty Name="IdObiektu" ColumnName="IdObiektu" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="NazwaTechniczna" ColumnName="NazwaTechniczna" />
+                <ScalarProperty Name="PowCalkowita" ColumnName="PowCalkowita" />
+                <Condition ColumnName="TypObiektu" Value="Korytarz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="CentrumHandloweModel.ObiektDoWynajecia">
+              <MappingFragment StoreEntitySet="Obiekty">
+                <ScalarProperty Name="IdObiektu" ColumnName="IdObiektu" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="NazwaTechniczna" ColumnName="NazwaTechniczna" />
+                <ScalarProperty Name="PowCalkowita" ColumnName="PowCalkowita" />
+                <ScalarProperty Name="CenaWynajmu" ColumnName="CenaWynajmu" />
+                <ScalarProperty Name="ZakWynajmu" ColumnName="ZakWynajmu" />
+                <ScalarProperty Name="RozpWynajmu" ColumnName="RozpWynajmu" />
+                <ScalarProperty Name="TypDzialalnosci" ColumnName="TypDzialalnosci" />
+                <Condition ColumnName="TypObiektu" Value="ObiektDoWynajecia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(CentrumHandloweModel.PomieszczenieTechniczne)">
+              <MappingFragment StoreEntitySet="Obiekty">
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="NazwaTechniczna" ColumnName="NazwaTechniczna" />
+                <ScalarProperty Name="PowCalkowita" ColumnName="PowCalkowita" />
+                <ScalarProperty Name="CenaWynajmu" ColumnName="CenaWynajmu" />
+                <ScalarProperty Name="ZakWynajmu" ColumnName="ZakWynajmu" />
+                <ScalarProperty Name="RozpWynajmu" ColumnName="RozpWynajmu" />
+                <ScalarProperty Name="TypDzialalnosci" ColumnName="TypDzialalnosci" />
+                <ScalarProperty Name="IdObiektu" ColumnName="IdObiektu" />
+                <Condition ColumnName="TypObiektu" Value="PomieszczenieTechniczne" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(CentrumHandloweModel.Stand)">
+              <MappingFragment StoreEntitySet="Obiekty">
+                <ScalarProperty Name="IdObiektu" ColumnName="IdObiektu" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="NazwaTechniczna" ColumnName="NazwaTechniczna" />
+                <ScalarProperty Name="PowCalkowita" ColumnName="PowCalkowita" />
+                <ScalarProperty Name="CenaWynajmu" ColumnName="CenaWynajmu" />
+                <ScalarProperty Name="ZakWynajmu" ColumnName="ZakWynajmu" />
+                <ScalarProperty Name="RozpWynajmu" ColumnName="RozpWynajmu" />
+                <ScalarProperty Name="TypDzialalnosci" ColumnName="TypDzialalnosci" />
+                <Condition ColumnName="TypObiektu" Value="Stand" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(CentrumHandloweModel.Pomieszczenie)">
+              <MappingFragment StoreEntitySet="Obiekty">
+                <ScalarProperty Name="IdObiektu" ColumnName="IdObiektu" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="NazwaTechniczna" ColumnName="NazwaTechniczna" />
+                <ScalarProperty Name="PowCalkowita" ColumnName="PowCalkowita" />
+                <ScalarProperty Name="CenaWynajmu" ColumnName="CenaWynajmu" />
+                <ScalarProperty Name="ZakWynajmu" ColumnName="ZakWynajmu" />
+                <ScalarProperty Name="RozpWynajmu" ColumnName="RozpWynajmu" />
+                <ScalarProperty Name="TypDzialalnosci" ColumnName="TypDzialalnosci" />
+                <ScalarProperty Name="PowWynajmu" ColumnName="PowWynajmu" />
+                <Condition ColumnName="TypObiektu" Value="Pomieszczenie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

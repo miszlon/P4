@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ce65eb70b6fc48b69408d463bac77d47" Name="Diagram1">
+        <EntityTypeShape EntityType="CentrumHandloweModel.Obiekty" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CentrumHandloweModel.Poziom" Width="1.5" PointX="2.5" PointY="1" />
+        <InheritanceConnector EntityType="CentrumHandloweModel.Poziom" />
+        <EntityTypeShape EntityType="CentrumHandloweModel.Korytarz" Width="1.5" PointX="5.625" PointY="1" />
+        <InheritanceConnector EntityType="CentrumHandloweModel.Korytarz" />
+        <EntityTypeShape EntityType="CentrumHandloweModel.Parking" Width="1.5" PointX="2.5" PointY="2.375" />
+        <InheritanceConnector EntityType="CentrumHandloweModel.Parking" />
+        <EntityTypeShape EntityType="CentrumHandloweModel.ObiektDoWynajecia" Width="1.5" PointX="8.5" PointY="1" />
+        <InheritanceConnector EntityType="CentrumHandloweModel.ObiektDoWynajecia" />
+        <EntityTypeShape EntityType="CentrumHandloweModel.Pomieszczenie" Width="1.5" PointX="10.75" PointY="3.875" />
+        <InheritanceConnector EntityType="CentrumHandloweModel.Pomieszczenie" />
+        <EntityTypeShape EntityType="CentrumHandloweModel.Stand" Width="1.5" PointX="8.5" PointY="3.75" />
+        <InheritanceConnector EntityType="CentrumHandloweModel.Stand" />
+        <EntityTypeShape EntityType="CentrumHandloweModel.PomieszczenieTechniczne" Width="1.5" PointX="6.125" PointY="4.125" />
+        <InheritanceConnector EntityType="CentrumHandloweModel.PomieszczenieTechniczne" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
