@@ -9,6 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/* APLIKACJA - ZADANIE DOMOWE MIŁOSZ SZKUDLARZ
+ * Możliwe wieloktorne dodawanie produktów z poziomu sklepu
+ * Z poziomu koszyka można zmieniać ilość produktów poprzez przyciski "+" i "-"
+ * Gdy obniżymy ilośc produktów do 0, wtedy program usunie ten produkt
+ * Gdy aktywne są jakiekolwiek promocje, wtedy pojawia się dodatkowe pole "Suma koszyka bez promocji", 
+ * które pokazuje cenę, gdyby promocje nie obowiązywały
+ * 
+ * -------------------------PROBLEMY------------------------------------
+ * 1. NIE WIEDZIAŁEM JAK ZAIMPLEMENTOWAĆ LISTĘ PRZYCISKÓW GLOBALNIE W KLASIE, ABY NIE POWTARZAĆ INICJACJI PRZYCISKÓW W METODACH
+ * BARDZO PROSZĘ O PODPOWIEDŹ W TYM TEMACIE
+*/
 namespace Produck_Viewer_Zadanie_Domowe
 {
     public partial class Form1 : Form
