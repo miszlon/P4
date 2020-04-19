@@ -16,6 +16,7 @@ namespace Produck_Viewer_Zadanie_Domowe
         #region INICJALIZACJA ZMIENNYCH
         int numerPrzycisku = 0;
         decimal totalPrice = 0;
+
         #endregion
 
         #region FUNKCJE
@@ -23,78 +24,21 @@ namespace Produck_Viewer_Zadanie_Domowe
         {
             InitializeComponent();
         }
-        public void UpdateBasket(string name, decimal price, int produkt, int ilosc)
+        public void UpdateBasket(string name, decimal price, int produkt, int ilosc, string url)
         {
-
-            switch (produkt)
+            List<Label> lblProdukt = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblProdukt")).OrderBy(a => a.Name).ToList();
+            for (int i = 0; i < Form1.koszyk.Count; i++)
             {
-                case 0:
-                    Wyswietlanie(produkt, name, ilosc, price);
-                    break;
-                case 1:
-                    Wyswietlanie(produkt + 1, name, ilosc, price);
-                    break;
-                case 2:
-                    Wyswietlanie(produkt + 1, name, ilosc, price);
-                    break;
-                case 3:
-                    Wyswietlanie(produkt + 1, name, ilosc, price);
-                    break;
-                case 4:
-                    Wyswietlanie(produkt + 1, name, ilosc, price);
-                    break;
-                case 5:
-                    Wyswietlanie(produkt + 1, name, ilosc, price);
-                    break;
-                case 6:
-                    Wyswietlanie(produkt + 1, name, ilosc, price);
-                    break;
-                case 7:
-                    Wyswietlanie(produkt + 1, name, ilosc, price);
-                    break;
-                case 8:
-                    Wyswietlanie(produkt + 1, name, ilosc, price);
-                    break;
-                case 9:
-                    Wyswietlanie(produkt + 1, name, ilosc, price);
-                    break;
+                if (lblProdukt[i].Visible == false)
+                {
+                    Wyswietlanie(produkt, name, ilosc, price, url);
+                }
             }
         }
-        public void DeleteBasket(string name, decimal price, int produkt)
+        public void DeleteBasket(string name, decimal price, int produkt, string url)
         {
-            switch (produkt)
-            {
-                case 0:
-                    Czyszczenie(produkt);
-                    break;
-                case 1:
-                    Czyszczenie(produkt + 1);
-                    break;
-                case 2:
-                    Czyszczenie(produkt + 1);
-                    break;
-                case 3:
-                    Czyszczenie(produkt + 1);
-                    break;
-                case 4:
-                    Czyszczenie(produkt + 1);
-                    break;
-                case 5:
-                    Czyszczenie(produkt + 1);
-                    break;
-                case 6:
-                    Czyszczenie(produkt + 1);
-                    break;
-                case 7:
-                    Czyszczenie(produkt + 1);
-                    break;
-                case 8:
-                    Czyszczenie(produkt + 1);
-                    break;
-                case 9:
-                    Czyszczenie(produkt + 1);
-                    break;
-            }
+            Czyszczenie(produkt);
+            
         }
         public void RefreshBasket()
         {
@@ -108,20 +52,12 @@ namespace Produck_Viewer_Zadanie_Domowe
         public void LabelPriceBasket(int labelNumber)
         {
             List<Label> lblPriceBasket = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblPriceBasket")).OrderBy(a => a.Name).ToList();
-            if (labelNumber == 1)
-            {
-                lblPriceBasket[labelNumber - 1].Text = (Form1.koszyk[labelNumber - 1].Ilosc * Form1.koszyk[labelNumber - 1].Price).ToString();
-            }
-            else lblPriceBasket[labelNumber].Text = (Form1.koszyk[labelNumber - 1].Ilosc * Form1.koszyk[labelNumber - 1].Price).ToString();
+            lblPriceBasket[labelNumber - 1].Text = (Form1.koszyk[labelNumber - 1].Ilosc * Form1.koszyk[labelNumber - 1].Price).ToString();
         }
         public void LabelIlosc(int labelNumber)
         {
             List<Label> lblIloscSztuk = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblIloscSztuk")).OrderBy(a => a.Name).ToList();
-            if (labelNumber == 1)
-            {
-                lblIloscSztuk[labelNumber - 1].Text = Form1.koszyk[labelNumber - 1].Ilosc.ToString();
-            }
-            else lblIloscSztuk[labelNumber].Text = Form1.koszyk[labelNumber - 1].Ilosc.ToString();
+            lblIloscSztuk[labelNumber - 1].Text = Form1.koszyk[labelNumber - 1].Ilosc.ToString();
         }
         public void DodajIlosc(int pozycjaKoszyka)
         {
@@ -139,7 +75,16 @@ namespace Produck_Viewer_Zadanie_Domowe
             {
                 RefreshBasket();
             }
-
+            if (lblTotal.Text == "0zł")
+            {
+                lblTotal.Visible = false;
+                label2.Visible = false;
+            }
+            else
+            {
+                lblTotal.Visible = true;
+                label2.Visible = true;
+            }
             TotalPrice();
         }
         public void Czyszczenie(int pozycjaKoszyka)
@@ -151,6 +96,7 @@ namespace Produck_Viewer_Zadanie_Domowe
             List<Label> lblPriceText = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblPriceText")).OrderBy(a => a.Name).ToList();
             List<Button> btnMinus = this.Controls.OfType<Button>().Where(a => a.Name.StartsWith("btnMinus")).OrderBy(a => a.Name).ToList();
             List<Button> btnPlus = this.Controls.OfType<Button>().Where(a => a.Name.StartsWith("btnPlus")).OrderBy(a => a.Name).ToList();
+            List<PictureBox> pbx = this.Controls.OfType<PictureBox>().Where(a => a.Name.StartsWith("pbx")).OrderBy(a => a.Name).ToList();
             lblIloscSztuk[pozycjaKoszyka].ResetText();
             lblPriceBasket[pozycjaKoszyka].ResetText();
             lblProdukt[pozycjaKoszyka].ResetText();
@@ -158,8 +104,9 @@ namespace Produck_Viewer_Zadanie_Domowe
             btnPlus[pozycjaKoszyka].Visible = false;
             lblIloscText[pozycjaKoszyka].Visible = false;
             lblPriceText[pozycjaKoszyka].Visible = false;
+            pbx[pozycjaKoszyka].Visible = false;
         }
-        public void Wyswietlanie(int pozycjaKoszyka, string name, int ilosc, decimal price)
+        public void Wyswietlanie(int pozycjaKoszyka, string name, int ilosc, decimal price, string url)
         {
             List<Label> lblIloscSztuk = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblIloscSztuk")).OrderBy(a => a.Name).ToList();
             List<Label> lblPriceBasket = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblPriceBasket")).OrderBy(a => a.Name).ToList();
@@ -168,16 +115,19 @@ namespace Produck_Viewer_Zadanie_Domowe
             List<Label> lblPriceText = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblPriceText")).OrderBy(a => a.Name).ToList();
             List<Button> btnMinus = this.Controls.OfType<Button>().Where(a => a.Name.StartsWith("btnMinus")).OrderBy(a => a.Name).ToList();
             List<Button> btnPlus = this.Controls.OfType<Button>().Where(a => a.Name.StartsWith("btnPlus")).OrderBy(a => a.Name).ToList();
+            List<PictureBox> pbx = this.Controls.OfType<PictureBox>().Where(a => a.Name.StartsWith("pbx")).OrderBy(a => a.Name).ToList();
             lblProdukt[pozycjaKoszyka].Text = name;
             lblProdukt[pozycjaKoszyka].Visible = true;
             lblIloscSztuk[pozycjaKoszyka].Text = ilosc.ToString();
             lblIloscSztuk[pozycjaKoszyka].Visible = true;
-            lblPriceBasket[pozycjaKoszyka].Text = price.ToString();
+            lblPriceBasket[pozycjaKoszyka].Text = (price.ToString() + "zł");
             lblPriceBasket[pozycjaKoszyka].Visible = true;
             lblIloscText[pozycjaKoszyka].Visible = true;
             lblPriceText[pozycjaKoszyka].Visible = true;
             btnMinus[pozycjaKoszyka].Visible = true;
             btnPlus[pozycjaKoszyka].Visible = true;
+            pbx[pozycjaKoszyka].Load(url);
+            pbx[pozycjaKoszyka].Visible = true;
         }
         public void ButtonPlus(int numerPrzycisku)
         {
@@ -193,33 +143,48 @@ namespace Produck_Viewer_Zadanie_Domowe
                 LabelIlosc(numerPrzycisku);
                 LabelPriceBasket(numerPrzycisku);
             }
-            //----------------TO JEST TO CO MI NIE DZIAŁA, ŻE JAK ILOŚĆ PRODUKTU BĘDZIE 0, TO ŻEBY USUNĄŁ TEN PRODUKT Z KLASY KOSZYK
-            //----------------ALE JAK SIĘ USUWA NP POZYCJE KOSZYK[0], 
-            //----------------TO WSZYSTKIE KOLEJNE POZYCJE ZMIENIAJĄ WTEDY SWÓJ INDEKS O -1, CO ROZWALA CAŁY PROGRAM.
-            //else
-            //{
-            //    string tresc = "Czy na pewno chcesz usunąć ten przedmiot z koszyka?";
-            //    string tytul = "Usuń Produkt.";
-            //    DialogResult wiadomosc;
-            //    wiadomosc = MessageBox.Show(tresc, tytul, MessageBoxButtons.YesNo);
-            //    if (wiadomosc == DialogResult.Yes)
-            //    {
-            //        Form1.koszyk.RemoveAt(numerPrzycisku - 1);
-            //        Czyszczenie(numerPrzycisku);
-            //        Form1.counter = 0;
-            //    }
-            //}
             else
             {
-                string tresc = "Usuń ostatni produkt lub anuluj cały koszyk.";
-                string tytul = "Błąd koszyka";
+                string tresc = "Czy na pewno chcesz usunąć ten przedmiot z koszyka?";
+                string tytul = "Usuń Produkt.";
                 DialogResult wiadomosc;
-                wiadomosc = MessageBox.Show(tresc, tytul);
+                wiadomosc = MessageBox.Show(tresc, tytul, MessageBoxButtons.YesNo);
+                if (wiadomosc == DialogResult.Yes)
+                {
+                    
+                    for (int i = 0; i < Form1.koszyk.Count;i++)
+                    {
+                        Czyszczenie(i);
+                    }
+                    Form1.koszyk.RemoveAt(numerPrzycisku - 1);
+                    Form1.counter = Form1.counter - 1;
+                    for (int i = 0; i < Form1.koszyk.Count; i++)
+                    {
+                        Wyswietlanie(i, Form1.koszyk[i].Name, Form1.koszyk[i].Ilosc, Form1.koszyk[i].Price, Form1.koszyk[i].ImgUrl);
+                    }
+                }
+            }
+        }
+        public void SprawdzaniePozycjiKoszyka(int pozycjaKoszyka)
+        {
+            List<Label> lblIloscSztuk = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblIloscSztuk")).OrderBy(a => a.Name).ToList();
+            List<Label> lblPriceBasket = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblPriceBasket")).OrderBy(a => a.Name).ToList();
+            List<Label> lblProdukt = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblProdukt")).OrderBy(a => a.Name).ToList();
+            List<Label> lblIloscText = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblIloscText")).OrderBy(a => a.Name).ToList();
+            List<Label> lblPriceText = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblPriceText")).OrderBy(a => a.Name).ToList();
+            List<Button> btnMinus = this.Controls.OfType<Button>().Where(a => a.Name.StartsWith("btnMinus")).OrderBy(a => a.Name).ToList();
+            List<Button> btnPlus = this.Controls.OfType<Button>().Where(a => a.Name.StartsWith("btnPlus")).OrderBy(a => a.Name).ToList();
+            for (int i = 0; i < Form1.koszyk.Count; i++)
+            {
+                if(lblProdukt[i].Text != Form1.koszyk[i].Name)
+                {
 
+                }
             }
         }
         public void TotalPrice()
         {
+            bool promocja = false;
             decimal cena = 0;
             bool czyPromocjaWgKategorii = false;
             for (int i = 0; i < Form1.koszyk.Count; i++)
@@ -232,6 +197,7 @@ namespace Produck_Viewer_Zadanie_Domowe
                     {
                         cena = cena + ObliczaniePromocji(Form1.koszyk[i].Price * Form1.koszyk[i].Ilosc, ProductsOnSale.ProductOnSale[a].Promocja);
                         czyRabat = true;
+                        promocja = true;
                         break;
                     }
                     if (i > 0 && Form1.koszyk[i].Kategoria != Form1.koszyk[i - 1].Kategoria)
@@ -244,12 +210,32 @@ namespace Produck_Viewer_Zadanie_Domowe
                     cena = cena + Form1.koszyk[i].Price * Form1.koszyk[i].Ilosc;
                 }
             }
+            if (czyPromocjaWgKategorii == true || promocja == true)
+            {
+                lblCenaBezPromocji.Visible = true;
+                lblCenaBezPromocjiText.Visible = true;
+                TotalPriceNoPromo();
+            }
+            else
+            {
+                lblCenaBezPromocji.Visible = false;
+                lblCenaBezPromocjiText.Visible = false;
+            }
             if (czyPromocjaWgKategorii == true)
             {
                 decimal wartoscPromocjiWgKategorii = 0.10m;
                 cena = ObliczaniePromocji(cena, wartoscPromocjiWgKategorii);
             }
-            lblTotal.Text = Math.Round(cena, 2).ToString();
+            lblTotal.Text = (Math.Round(cena, 2).ToString() + "zł");
+        }
+        public void TotalPriceNoPromo()
+        {
+            decimal totalPriceNoPromo = 0;
+            for(int i = 0; i < Form1.koszyk.Count;i++)
+            {
+                totalPriceNoPromo = totalPriceNoPromo + (Form1.koszyk[i].Price * Form1.koszyk[i].Ilosc);
+            }
+            lblCenaBezPromocji.Text = totalPriceNoPromo.ToString() + "zł";
         }
         public decimal ObliczaniePromocji(decimal cena, decimal promocja)
         {

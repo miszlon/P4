@@ -12,17 +12,15 @@ namespace Produck_Viewer_Zadanie_Domowe.Models
         public decimal Price { get; set; }
         public int Ilosc { get; set; }
         public ProductCategory Kategoria { get; set; }
+        public string ImgUrl { get; set; }
 
-        public ProductsInBasket(string name, decimal price, int ilosc, ProductCategory kategoria)
+        public ProductsInBasket(string name, decimal price, int ilosc, ProductCategory kategoria, string imgUrl)
         {
             Name = name;
             Price = price;
             Ilosc = ilosc;
             Kategoria = kategoria;
-        }
-
-        public ProductsInBasket()
-        {
+            ImgUrl = imgUrl;
         }
     }
 }

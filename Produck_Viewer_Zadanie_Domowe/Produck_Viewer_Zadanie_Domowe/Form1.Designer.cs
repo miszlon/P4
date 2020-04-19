@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnProduct1 = new System.Windows.Forms.Button();
             this.btnProduct2 = new System.Windows.Forms.Button();
             this.btnProduct4 = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.btnAddToBasket = new System.Windows.Forms.Button();
             this.btnDeleteFromBasket = new System.Windows.Forms.Button();
             this.btnCancelBasket = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.productUserBasket1 = new Produck_Viewer_Zadanie_Domowe.ProductUserBasket();
             this.productUserControl1 = new Produck_Viewer_Zadanie_Domowe.ProductUserControl();
             this.SuspendLayout();
@@ -128,35 +130,45 @@
             // btnAddToBasket
             // 
             this.btnAddToBasket.AutoSize = true;
+            this.btnAddToBasket.BackColor = System.Drawing.Color.Lime;
             this.btnAddToBasket.Location = new System.Drawing.Point(455, 24);
             this.btnAddToBasket.Name = "btnAddToBasket";
             this.btnAddToBasket.Size = new System.Drawing.Size(132, 27);
             this.btnAddToBasket.TabIndex = 11;
             this.btnAddToBasket.Text = "Dodaj do Koszyka";
-            this.btnAddToBasket.UseVisualStyleBackColor = true;
+            this.btnAddToBasket.UseVisualStyleBackColor = false;
             this.btnAddToBasket.Click += new System.EventHandler(this.btnAddToBasket_Click);
             // 
             // btnDeleteFromBasket
             // 
             this.btnDeleteFromBasket.AutoSize = true;
+            this.btnDeleteFromBasket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDeleteFromBasket.Location = new System.Drawing.Point(592, 57);
             this.btnDeleteFromBasket.Name = "btnDeleteFromBasket";
             this.btnDeleteFromBasket.Size = new System.Drawing.Size(171, 27);
             this.btnDeleteFromBasket.TabIndex = 14;
             this.btnDeleteFromBasket.Text = "Usuń ostatnie z koszyka";
-            this.btnDeleteFromBasket.UseVisualStyleBackColor = true;
+            this.btnDeleteFromBasket.UseVisualStyleBackColor = false;
+            this.btnDeleteFromBasket.Visible = false;
             this.btnDeleteFromBasket.Click += new System.EventHandler(this.btnDeleteFromBasket_Click);
             // 
             // btnCancelBasket
             // 
             this.btnCancelBasket.AutoSize = true;
+            this.btnCancelBasket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnCancelBasket.Location = new System.Drawing.Point(593, 24);
             this.btnCancelBasket.Name = "btnCancelBasket";
             this.btnCancelBasket.Size = new System.Drawing.Size(170, 27);
             this.btnCancelBasket.TabIndex = 15;
             this.btnCancelBasket.Text = "Anuluj cały koszyk";
-            this.btnCancelBasket.UseVisualStyleBackColor = true;
+            this.btnCancelBasket.UseVisualStyleBackColor = false;
+            this.btnCancelBasket.Visible = false;
             this.btnCancelBasket.Click += new System.EventHandler(this.btnTestCancel_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // productUserBasket1
             // 
@@ -172,6 +184,7 @@
             this.productUserControl1.Name = "productUserControl1";
             this.productUserControl1.Size = new System.Drawing.Size(575, 500);
             this.productUserControl1.TabIndex = 12;
+            this.productUserControl1.Visible = false;
             // 
             // Form1
             // 
@@ -213,6 +226,7 @@
         private ProductUserBasket productUserBasket1;
         private System.Windows.Forms.Button btnDeleteFromBasket;
         private System.Windows.Forms.Button btnCancelBasket;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -66,10 +66,10 @@
             this.lblIloscText9 = new System.Windows.Forms.Label();
             this.lblPriceBasket9 = new System.Windows.Forms.Label();
             this.lblProdukt9 = new System.Windows.Forms.Label();
-            this.lblPriceText10 = new System.Windows.Forms.Label();
-            this.lblIloscText10 = new System.Windows.Forms.Label();
-            this.lblPriceBasket10 = new System.Windows.Forms.Label();
-            this.lblProdukt10 = new System.Windows.Forms.Label();
+            this.lblPriceText99 = new System.Windows.Forms.Label();
+            this.lblIloscText99 = new System.Windows.Forms.Label();
+            this.lblPriceBasket99 = new System.Windows.Forms.Label();
+            this.lblProdukt99 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblIloscSztuk1 = new System.Windows.Forms.Label();
@@ -99,18 +99,41 @@
             this.btnPlus9 = new System.Windows.Forms.Button();
             this.btnMinus9 = new System.Windows.Forms.Button();
             this.lblIloscSztuk9 = new System.Windows.Forms.Label();
-            this.btnPlus10 = new System.Windows.Forms.Button();
-            this.btnMinus10 = new System.Windows.Forms.Button();
-            this.lblIloscSztuk10 = new System.Windows.Forms.Label();
+            this.btnPlus99 = new System.Windows.Forms.Button();
+            this.btnMinus99 = new System.Windows.Forms.Button();
+            this.lblIloscSztuk99 = new System.Windows.Forms.Label();
+            this.pbx1 = new System.Windows.Forms.PictureBox();
+            this.pbx2 = new System.Windows.Forms.PictureBox();
+            this.pbx3 = new System.Windows.Forms.PictureBox();
+            this.pbx4 = new System.Windows.Forms.PictureBox();
+            this.pbx5 = new System.Windows.Forms.PictureBox();
+            this.pbx6 = new System.Windows.Forms.PictureBox();
+            this.pbx7 = new System.Windows.Forms.PictureBox();
+            this.pbx8 = new System.Windows.Forms.PictureBox();
+            this.pbx9 = new System.Windows.Forms.PictureBox();
+            this.pbx99 = new System.Windows.Forms.PictureBox();
+            this.lblCenaBezPromocjiText = new System.Windows.Forms.Label();
+            this.lblCenaBezPromocji = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx99)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProdukt1
             // 
             this.lblProdukt1.AutoSize = true;
-            this.lblProdukt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblProdukt1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdukt1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblProdukt1.Location = new System.Drawing.Point(160, 48);
             this.lblProdukt1.Name = "lblProdukt1";
-            this.lblProdukt1.Size = new System.Drawing.Size(66, 20);
+            this.lblProdukt1.Size = new System.Drawing.Size(75, 22);
             this.lblProdukt1.TabIndex = 0;
             this.lblProdukt1.Text = "Produkt";
             this.lblProdukt1.Visible = false;
@@ -186,10 +209,11 @@
             // lblProdukt2
             // 
             this.lblProdukt2.AutoSize = true;
-            this.lblProdukt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblProdukt2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdukt2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblProdukt2.Location = new System.Drawing.Point(160, 89);
             this.lblProdukt2.Name = "lblProdukt2";
-            this.lblProdukt2.Size = new System.Drawing.Size(66, 20);
+            this.lblProdukt2.Size = new System.Drawing.Size(75, 22);
             this.lblProdukt2.TabIndex = 5;
             this.lblProdukt2.Text = "Produkt";
             // 
@@ -226,10 +250,11 @@
             // lblProdukt3
             // 
             this.lblProdukt3.AutoSize = true;
-            this.lblProdukt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblProdukt3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdukt3.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblProdukt3.Location = new System.Drawing.Point(160, 128);
             this.lblProdukt3.Name = "lblProdukt3";
-            this.lblProdukt3.Size = new System.Drawing.Size(66, 20);
+            this.lblProdukt3.Size = new System.Drawing.Size(75, 22);
             this.lblProdukt3.TabIndex = 10;
             this.lblProdukt3.Text = "Produkt";
             // 
@@ -266,10 +291,11 @@
             // lblProdukt4
             // 
             this.lblProdukt4.AutoSize = true;
-            this.lblProdukt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblProdukt4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdukt4.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblProdukt4.Location = new System.Drawing.Point(160, 166);
             this.lblProdukt4.Name = "lblProdukt4";
-            this.lblProdukt4.Size = new System.Drawing.Size(66, 20);
+            this.lblProdukt4.Size = new System.Drawing.Size(75, 22);
             this.lblProdukt4.TabIndex = 15;
             this.lblProdukt4.Text = "Produkt";
             // 
@@ -306,10 +332,11 @@
             // lblProdukt5
             // 
             this.lblProdukt5.AutoSize = true;
-            this.lblProdukt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblProdukt5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdukt5.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblProdukt5.Location = new System.Drawing.Point(160, 205);
             this.lblProdukt5.Name = "lblProdukt5";
-            this.lblProdukt5.Size = new System.Drawing.Size(66, 20);
+            this.lblProdukt5.Size = new System.Drawing.Size(75, 22);
             this.lblProdukt5.TabIndex = 20;
             this.lblProdukt5.Text = "Produkt";
             // 
@@ -346,10 +373,11 @@
             // lblProdukt6
             // 
             this.lblProdukt6.AutoSize = true;
-            this.lblProdukt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblProdukt6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdukt6.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblProdukt6.Location = new System.Drawing.Point(160, 248);
             this.lblProdukt6.Name = "lblProdukt6";
-            this.lblProdukt6.Size = new System.Drawing.Size(66, 20);
+            this.lblProdukt6.Size = new System.Drawing.Size(75, 22);
             this.lblProdukt6.TabIndex = 25;
             this.lblProdukt6.Text = "Produkt";
             // 
@@ -386,10 +414,11 @@
             // lblProdukt7
             // 
             this.lblProdukt7.AutoSize = true;
-            this.lblProdukt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblProdukt7.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdukt7.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblProdukt7.Location = new System.Drawing.Point(160, 285);
             this.lblProdukt7.Name = "lblProdukt7";
-            this.lblProdukt7.Size = new System.Drawing.Size(66, 20);
+            this.lblProdukt7.Size = new System.Drawing.Size(75, 22);
             this.lblProdukt7.TabIndex = 30;
             this.lblProdukt7.Text = "Produkt";
             // 
@@ -426,10 +455,11 @@
             // lblProdukt8
             // 
             this.lblProdukt8.AutoSize = true;
-            this.lblProdukt8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblProdukt8.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdukt8.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblProdukt8.Location = new System.Drawing.Point(160, 325);
             this.lblProdukt8.Name = "lblProdukt8";
-            this.lblProdukt8.Size = new System.Drawing.Size(66, 20);
+            this.lblProdukt8.Size = new System.Drawing.Size(75, 22);
             this.lblProdukt8.TabIndex = 35;
             this.lblProdukt8.Text = "Produkt";
             // 
@@ -466,52 +496,54 @@
             // lblProdukt9
             // 
             this.lblProdukt9.AutoSize = true;
-            this.lblProdukt9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblProdukt9.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdukt9.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblProdukt9.Location = new System.Drawing.Point(160, 365);
             this.lblProdukt9.Name = "lblProdukt9";
-            this.lblProdukt9.Size = new System.Drawing.Size(66, 20);
+            this.lblProdukt9.Size = new System.Drawing.Size(75, 22);
             this.lblProdukt9.TabIndex = 40;
             this.lblProdukt9.Text = "Produkt";
             // 
-            // lblPriceText10
+            // lblPriceText99
             // 
-            this.lblPriceText10.AutoSize = true;
-            this.lblPriceText10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblPriceText10.Location = new System.Drawing.Point(597, 401);
-            this.lblPriceText10.Name = "lblPriceText10";
-            this.lblPriceText10.Size = new System.Drawing.Size(53, 20);
-            this.lblPriceText10.TabIndex = 49;
-            this.lblPriceText10.Text = "Cena:";
+            this.lblPriceText99.AutoSize = true;
+            this.lblPriceText99.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblPriceText99.Location = new System.Drawing.Point(597, 401);
+            this.lblPriceText99.Name = "lblPriceText99";
+            this.lblPriceText99.Size = new System.Drawing.Size(53, 20);
+            this.lblPriceText99.TabIndex = 49;
+            this.lblPriceText99.Text = "Cena:";
             // 
-            // lblIloscText10
+            // lblIloscText99
             // 
-            this.lblIloscText10.AutoSize = true;
-            this.lblIloscText10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblIloscText10.Location = new System.Drawing.Point(469, 401);
-            this.lblIloscText10.Name = "lblIloscText10";
-            this.lblIloscText10.Size = new System.Drawing.Size(49, 20);
-            this.lblIloscText10.TabIndex = 48;
-            this.lblIloscText10.Text = "Ilość:";
+            this.lblIloscText99.AutoSize = true;
+            this.lblIloscText99.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblIloscText99.Location = new System.Drawing.Point(469, 401);
+            this.lblIloscText99.Name = "lblIloscText99";
+            this.lblIloscText99.Size = new System.Drawing.Size(49, 20);
+            this.lblIloscText99.TabIndex = 48;
+            this.lblIloscText99.Text = "Ilość:";
             // 
-            // lblPriceBasket10
+            // lblPriceBasket99
             // 
-            this.lblPriceBasket10.AutoSize = true;
-            this.lblPriceBasket10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblPriceBasket10.Location = new System.Drawing.Point(663, 401);
-            this.lblPriceBasket10.Name = "lblPriceBasket10";
-            this.lblPriceBasket10.Size = new System.Drawing.Size(48, 20);
-            this.lblPriceBasket10.TabIndex = 46;
-            this.lblPriceBasket10.Text = "Cena";
+            this.lblPriceBasket99.AutoSize = true;
+            this.lblPriceBasket99.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblPriceBasket99.Location = new System.Drawing.Point(663, 401);
+            this.lblPriceBasket99.Name = "lblPriceBasket99";
+            this.lblPriceBasket99.Size = new System.Drawing.Size(48, 20);
+            this.lblPriceBasket99.TabIndex = 46;
+            this.lblPriceBasket99.Text = "Cena";
             // 
-            // lblProdukt10
+            // lblProdukt99
             // 
-            this.lblProdukt10.AutoSize = true;
-            this.lblProdukt10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblProdukt10.Location = new System.Drawing.Point(160, 403);
-            this.lblProdukt10.Name = "lblProdukt10";
-            this.lblProdukt10.Size = new System.Drawing.Size(66, 20);
-            this.lblProdukt10.TabIndex = 45;
-            this.lblProdukt10.Text = "Produkt";
+            this.lblProdukt99.AutoSize = true;
+            this.lblProdukt99.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdukt99.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblProdukt99.Location = new System.Drawing.Point(160, 403);
+            this.lblProdukt99.Name = "lblProdukt99";
+            this.lblProdukt99.Size = new System.Drawing.Size(75, 22);
+            this.lblProdukt99.TabIndex = 45;
+            this.lblProdukt99.Text = "Produkt";
             // 
             // lblTotal
             // 
@@ -805,43 +837,168 @@
             this.lblIloscSztuk9.Text = "ilość";
             this.lblIloscSztuk9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnPlus10
+            // btnPlus99
             // 
-            this.btnPlus10.Location = new System.Drawing.Point(576, 403);
-            this.btnPlus10.Name = "btnPlus10";
-            this.btnPlus10.Size = new System.Drawing.Size(20, 23);
-            this.btnPlus10.TabIndex = 81;
-            this.btnPlus10.Text = "+";
-            this.btnPlus10.UseVisualStyleBackColor = true;
-            this.btnPlus10.Click += new System.EventHandler(this.btnPlus10_Click);
+            this.btnPlus99.Location = new System.Drawing.Point(576, 403);
+            this.btnPlus99.Name = "btnPlus99";
+            this.btnPlus99.Size = new System.Drawing.Size(20, 23);
+            this.btnPlus99.TabIndex = 81;
+            this.btnPlus99.Text = "+";
+            this.btnPlus99.UseVisualStyleBackColor = true;
+            this.btnPlus99.Click += new System.EventHandler(this.btnPlus10_Click);
             // 
-            // btnMinus10
+            // btnMinus99
             // 
-            this.btnMinus10.Location = new System.Drawing.Point(524, 402);
-            this.btnMinus10.Name = "btnMinus10";
-            this.btnMinus10.Size = new System.Drawing.Size(20, 23);
-            this.btnMinus10.TabIndex = 80;
-            this.btnMinus10.Text = "-";
-            this.btnMinus10.UseVisualStyleBackColor = true;
-            this.btnMinus10.Click += new System.EventHandler(this.btnMinus10_Click);
+            this.btnMinus99.Location = new System.Drawing.Point(524, 402);
+            this.btnMinus99.Name = "btnMinus99";
+            this.btnMinus99.Size = new System.Drawing.Size(20, 23);
+            this.btnMinus99.TabIndex = 80;
+            this.btnMinus99.Text = "-";
+            this.btnMinus99.UseVisualStyleBackColor = true;
+            this.btnMinus99.Click += new System.EventHandler(this.btnMinus10_Click);
             // 
-            // lblIloscSztuk10
+            // lblIloscSztuk99
             // 
-            this.lblIloscSztuk10.AutoSize = true;
-            this.lblIloscSztuk10.Location = new System.Drawing.Point(544, 406);
-            this.lblIloscSztuk10.Name = "lblIloscSztuk10";
-            this.lblIloscSztuk10.Size = new System.Drawing.Size(36, 17);
-            this.lblIloscSztuk10.TabIndex = 79;
-            this.lblIloscSztuk10.Text = "ilość";
-            this.lblIloscSztuk10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblIloscSztuk99.AutoSize = true;
+            this.lblIloscSztuk99.Location = new System.Drawing.Point(544, 406);
+            this.lblIloscSztuk99.Name = "lblIloscSztuk99";
+            this.lblIloscSztuk99.Size = new System.Drawing.Size(36, 17);
+            this.lblIloscSztuk99.TabIndex = 79;
+            this.lblIloscSztuk99.Text = "ilość";
+            this.lblIloscSztuk99.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pbx1
+            // 
+            this.pbx1.Location = new System.Drawing.Point(127, 45);
+            this.pbx1.Name = "pbx1";
+            this.pbx1.Size = new System.Drawing.Size(27, 21);
+            this.pbx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx1.TabIndex = 82;
+            this.pbx1.TabStop = false;
+            // 
+            // pbx2
+            // 
+            this.pbx2.Location = new System.Drawing.Point(127, 90);
+            this.pbx2.Name = "pbx2";
+            this.pbx2.Size = new System.Drawing.Size(27, 21);
+            this.pbx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx2.TabIndex = 83;
+            this.pbx2.TabStop = false;
+            // 
+            // pbx3
+            // 
+            this.pbx3.Location = new System.Drawing.Point(127, 128);
+            this.pbx3.Name = "pbx3";
+            this.pbx3.Size = new System.Drawing.Size(27, 21);
+            this.pbx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx3.TabIndex = 84;
+            this.pbx3.TabStop = false;
+            // 
+            // pbx4
+            // 
+            this.pbx4.Location = new System.Drawing.Point(127, 167);
+            this.pbx4.Name = "pbx4";
+            this.pbx4.Size = new System.Drawing.Size(27, 21);
+            this.pbx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx4.TabIndex = 85;
+            this.pbx4.TabStop = false;
+            // 
+            // pbx5
+            // 
+            this.pbx5.Location = new System.Drawing.Point(127, 206);
+            this.pbx5.Name = "pbx5";
+            this.pbx5.Size = new System.Drawing.Size(27, 21);
+            this.pbx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx5.TabIndex = 86;
+            this.pbx5.TabStop = false;
+            // 
+            // pbx6
+            // 
+            this.pbx6.Location = new System.Drawing.Point(127, 247);
+            this.pbx6.Name = "pbx6";
+            this.pbx6.Size = new System.Drawing.Size(27, 21);
+            this.pbx6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx6.TabIndex = 87;
+            this.pbx6.TabStop = false;
+            // 
+            // pbx7
+            // 
+            this.pbx7.Location = new System.Drawing.Point(127, 282);
+            this.pbx7.Name = "pbx7";
+            this.pbx7.Size = new System.Drawing.Size(27, 21);
+            this.pbx7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx7.TabIndex = 88;
+            this.pbx7.TabStop = false;
+            // 
+            // pbx8
+            // 
+            this.pbx8.Location = new System.Drawing.Point(127, 322);
+            this.pbx8.Name = "pbx8";
+            this.pbx8.Size = new System.Drawing.Size(27, 21);
+            this.pbx8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx8.TabIndex = 89;
+            this.pbx8.TabStop = false;
+            // 
+            // pbx9
+            // 
+            this.pbx9.Location = new System.Drawing.Point(127, 362);
+            this.pbx9.Name = "pbx9";
+            this.pbx9.Size = new System.Drawing.Size(27, 21);
+            this.pbx9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx9.TabIndex = 90;
+            this.pbx9.TabStop = false;
+            // 
+            // pbx99
+            // 
+            this.pbx99.Location = new System.Drawing.Point(127, 404);
+            this.pbx99.Name = "pbx99";
+            this.pbx99.Size = new System.Drawing.Size(27, 21);
+            this.pbx99.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx99.TabIndex = 91;
+            this.pbx99.TabStop = false;
+            // 
+            // lblCenaBezPromocjiText
+            // 
+            this.lblCenaBezPromocjiText.AutoSize = true;
+            this.lblCenaBezPromocjiText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblCenaBezPromocjiText.Location = new System.Drawing.Point(356, 480);
+            this.lblCenaBezPromocjiText.Name = "lblCenaBezPromocjiText";
+            this.lblCenaBezPromocjiText.Size = new System.Drawing.Size(176, 20);
+            this.lblCenaBezPromocjiText.TabIndex = 93;
+            this.lblCenaBezPromocjiText.Text = "Suma bez promocji:";
+            this.lblCenaBezPromocjiText.Visible = false;
+            // 
+            // lblCenaBezPromocji
+            // 
+            this.lblCenaBezPromocji.AutoSize = true;
+            this.lblCenaBezPromocji.BackColor = System.Drawing.SystemColors.Control;
+            this.lblCenaBezPromocji.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblCenaBezPromocji.ForeColor = System.Drawing.Color.Red;
+            this.lblCenaBezPromocji.Location = new System.Drawing.Point(551, 481);
+            this.lblCenaBezPromocji.Name = "lblCenaBezPromocji";
+            this.lblCenaBezPromocji.Size = new System.Drawing.Size(0, 20);
+            this.lblCenaBezPromocji.TabIndex = 92;
+            this.lblCenaBezPromocji.Visible = false;
             // 
             // ProductUserBasket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnPlus10);
-            this.Controls.Add(this.btnMinus10);
-            this.Controls.Add(this.lblIloscSztuk10);
+            this.Controls.Add(this.lblCenaBezPromocjiText);
+            this.Controls.Add(this.lblCenaBezPromocji);
+            this.Controls.Add(this.pbx99);
+            this.Controls.Add(this.pbx9);
+            this.Controls.Add(this.pbx8);
+            this.Controls.Add(this.pbx7);
+            this.Controls.Add(this.pbx6);
+            this.Controls.Add(this.pbx5);
+            this.Controls.Add(this.pbx4);
+            this.Controls.Add(this.pbx3);
+            this.Controls.Add(this.pbx2);
+            this.Controls.Add(this.pbx1);
+            this.Controls.Add(this.btnPlus99);
+            this.Controls.Add(this.btnMinus99);
+            this.Controls.Add(this.lblIloscSztuk99);
             this.Controls.Add(this.btnPlus9);
             this.Controls.Add(this.btnMinus9);
             this.Controls.Add(this.lblIloscSztuk9);
@@ -871,10 +1028,10 @@
             this.Controls.Add(this.lblIloscSztuk1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.lblPriceText10);
-            this.Controls.Add(this.lblIloscText10);
-            this.Controls.Add(this.lblPriceBasket10);
-            this.Controls.Add(this.lblProdukt10);
+            this.Controls.Add(this.lblPriceText99);
+            this.Controls.Add(this.lblIloscText99);
+            this.Controls.Add(this.lblPriceBasket99);
+            this.Controls.Add(this.lblProdukt99);
             this.Controls.Add(this.lblPriceText9);
             this.Controls.Add(this.lblIloscText9);
             this.Controls.Add(this.lblPriceBasket9);
@@ -912,7 +1069,17 @@
             this.Controls.Add(this.lblPriceBasket1);
             this.Controls.Add(this.lblProdukt1);
             this.Name = "ProductUserBasket";
-            this.Size = new System.Drawing.Size(743, 500);
+            this.Size = new System.Drawing.Size(743, 532);
+            ((System.ComponentModel.ISupportInitialize)(this.pbx1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx99)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -957,10 +1124,10 @@
         private System.Windows.Forms.Label lblIloscText9;
         private System.Windows.Forms.Label lblPriceBasket9;
         private System.Windows.Forms.Label lblProdukt9;
-        private System.Windows.Forms.Label lblPriceText10;
-        private System.Windows.Forms.Label lblIloscText10;
-        private System.Windows.Forms.Label lblPriceBasket10;
-        private System.Windows.Forms.Label lblProdukt10;
+        private System.Windows.Forms.Label lblPriceText99;
+        private System.Windows.Forms.Label lblIloscText99;
+        private System.Windows.Forms.Label lblPriceBasket99;
+        private System.Windows.Forms.Label lblProdukt99;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblIloscSztuk1;
@@ -990,8 +1157,20 @@
         private System.Windows.Forms.Button btnPlus9;
         private System.Windows.Forms.Button btnMinus9;
         private System.Windows.Forms.Label lblIloscSztuk9;
-        private System.Windows.Forms.Button btnPlus10;
-        private System.Windows.Forms.Button btnMinus10;
-        private System.Windows.Forms.Label lblIloscSztuk10;
+        private System.Windows.Forms.Button btnPlus99;
+        private System.Windows.Forms.Button btnMinus99;
+        private System.Windows.Forms.Label lblIloscSztuk99;
+        private System.Windows.Forms.PictureBox pbx1;
+        private System.Windows.Forms.PictureBox pbx2;
+        private System.Windows.Forms.PictureBox pbx3;
+        private System.Windows.Forms.PictureBox pbx4;
+        private System.Windows.Forms.PictureBox pbx5;
+        private System.Windows.Forms.PictureBox pbx6;
+        private System.Windows.Forms.PictureBox pbx7;
+        private System.Windows.Forms.PictureBox pbx8;
+        private System.Windows.Forms.PictureBox pbx9;
+        private System.Windows.Forms.PictureBox pbx99;
+        private System.Windows.Forms.Label lblCenaBezPromocjiText;
+        private System.Windows.Forms.Label lblCenaBezPromocji;
     }
 }
