@@ -14,7 +14,7 @@ namespace Produck_Viewer_Zadanie_Domowe
     public partial class Form1 : Form
     {
         public static List<ProductsInBasket> koszyk = new List<ProductsInBasket>();
-       
+
         private readonly ProductService _productService = new ProductService();
         int produkt = -1;
         public static int counter = 0;
@@ -22,7 +22,6 @@ namespace Produck_Viewer_Zadanie_Domowe
         {
             InitializeComponent();
         }
-
         private void btnProduct1_Click(object sender, EventArgs e)
         {
             produkt = 0;
@@ -55,7 +54,7 @@ namespace Produck_Viewer_Zadanie_Domowe
         }
         private void btnStore_Click(object sender, EventArgs e)
         {
-                   
+
             productUserBasket1.Visible = false;
             btnProduct1.Visible = true;
             btnProduct2.Visible = true;
@@ -82,6 +81,13 @@ namespace Produck_Viewer_Zadanie_Domowe
             btnDeleteFromBasket.Visible = true;
             btnCancelBasket.Visible = true;
         }
+        public void PopUpDodanieProduktu()
+        {
+            string wiadomosc = "Dodano 1 produkt do koszyka";
+            string tytul = "Dodawanie produków";
+            DialogResult popUp;
+            popUp = MessageBox.Show(wiadomosc, tytul);
+        }
         private void btnAddToBasket_Click(object sender, EventArgs e)
         {
             bool istnieje = false;
@@ -99,8 +105,10 @@ namespace Produck_Viewer_Zadanie_Domowe
                 if (counter < 10 && istnieje == false)
                 {
                     koszyk.Add(new ProductsInBasket(_productService.Products[produkt].Name, _productService.Products[produkt].Price, 1, _productService.Products[produkt].Category, _productService.Products[produkt].ImageUrl));
-                    productUserBasket1.UpdateBasket(koszyk[counter].Name, koszyk[counter].Price, counter, koszyk[counter].Ilosc,koszyk[counter].ImgUrl);
+                    productUserBasket1.UpdateBasket(koszyk[counter].Name, koszyk[counter].Price, counter, koszyk[counter].Ilosc, koszyk[counter].ImgUrl);
                     counter++;
+                    PopUpDodanieProduktu();
+
                 }
                 else if (counter < 10 && istnieje == true)
                 {
@@ -108,6 +116,7 @@ namespace Produck_Viewer_Zadanie_Domowe
                     koszyk.RemoveAt(pozycja);
                     koszyk.Insert(pozycja, new ProductsInBasket(_productService.Products[produkt].Name, _productService.Products[produkt].Price, 1 + staraIlosc, _productService.Products[produkt].Category, _productService.Products[produkt].ImageUrl));
                     productUserBasket1.UpdateBasket(koszyk[pozycja].Name, koszyk[pozycja].Price * koszyk[pozycja].Ilosc, pozycja, koszyk[pozycja].Ilosc, koszyk[pozycja].ImgUrl);
+                    PopUpDodanieProduktu();
                 }
                 else
                 {
@@ -127,14 +136,21 @@ namespace Produck_Viewer_Zadanie_Domowe
                 wiadomosc = MessageBox.Show(message, title);
             }
         }
-
         private void btnDeleteFromBasket_Click(object sender, EventArgs e)
         {
             if (counter > 0)
             {
-                counter--;
-                productUserBasket1.DeleteBasket(koszyk[counter].Name, koszyk[counter].Price, counter,koszyk[counter].ImgUrl);
-                koszyk.RemoveAt(counter);
+                string wiadomosc = "Czy na pewno chcesz usunąć ostatni produkt w koszyku?";
+                string tytul = "Usuwanie produktu";
+                DialogResult popUp;
+                popUp = MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.YesNo);
+                if (popUp == DialogResult.Yes)
+                {
+                    counter--;
+                    productUserBasket1.DeleteBasket(koszyk[counter].Name, koszyk[counter].Price, counter, koszyk[counter].ImgUrl);
+                    koszyk.RemoveAt(counter);
+                }
+
             }
             else
             {
@@ -146,14 +162,20 @@ namespace Produck_Viewer_Zadanie_Domowe
                 result = MessageBox.Show(message, caption);
             }
         }
-
         private void btnTestCancel_Click(object sender, EventArgs e)
         {
             if (koszyk.Count > 0)
             {
-                koszyk.Clear();
-                productUserBasket1.RefreshBasket();
-                counter = 0;
+                string wiadomosc = "Czy na pewno chcesz usunąć cały koszyk?";
+                string tytul = "Usuwanie produktu";
+                DialogResult popUp;
+                popUp = MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.YesNo);
+                if (popUp == DialogResult.Yes)
+                {
+                    koszyk.Clear();
+                    productUserBasket1.RefreshBasket();
+                    counter = 0;
+                }
             }
             else
             {
@@ -165,7 +187,6 @@ namespace Produck_Viewer_Zadanie_Domowe
                 result = MessageBox.Show(message, caption);
             }
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (produkt >= 0 && productUserBasket1.Visible == false)
