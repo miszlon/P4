@@ -52,7 +52,7 @@ namespace Produck_Viewer_Zadanie_Domowe
         public void LabelPriceBasket(int labelNumber)
         {
             List<Label> lblPriceBasket = this.Controls.OfType<Label>().Where(a => a.Name.StartsWith("lblPriceBasket")).OrderBy(a => a.Name).ToList();
-            lblPriceBasket[labelNumber - 1].Text = (Form1.koszyk[labelNumber - 1].Ilosc * Form1.koszyk[labelNumber - 1].Price).ToString();
+            lblPriceBasket[labelNumber - 1].Text = ((Form1.koszyk[labelNumber - 1].Ilosc * Form1.koszyk[labelNumber - 1].Price).ToString() + "zł");
         }
         public void LabelIlosc(int labelNumber)
         {
